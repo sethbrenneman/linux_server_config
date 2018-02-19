@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
 from psqlmodels import User, Movie, Category
 
-engine = create_engine('postgres+psycopg2://postgres:seth@localhost/test.db')
+engine = create_engine('postgres+psycopg2://postgres:seth@localhost/items')
 # event.listen(engine, "connect", pragma_fk_conn)
 session = sessionmaker(bind=engine)()
 

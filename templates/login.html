@@ -8,7 +8,6 @@
 <body>
 
 
-
 <div id="signinButton">
   <span class="g-signin"
     data-scope="openid email"
@@ -27,8 +26,6 @@
 function signInCallback(authResult) {
   if (authResult['code']) {
     $('signinButton').attr('style', 'display: none');
-    console.log("MAKING AJAX REQUEST")
-    console.log("STATE={{state}}")
     $.ajax({
       type: 'POST',
       url: '/gconnect?state={{state}}',

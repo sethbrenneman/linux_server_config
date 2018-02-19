@@ -49,5 +49,5 @@ class Movie(Base):
                 'description': self.description}
 
 
-engine = create_engine('postgres+psycopg2://postgres:seth@localhost/test.db')
+engine = create_engine('postgres+psycopg2://postgres:seth@localhost/items')
 Base.metadata.create_all(engine)
